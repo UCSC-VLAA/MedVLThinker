@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MedVLThinker: Simple Baselines for Multimodal Medical Reasoning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body{font-family: "Helvetica Neue", Arial, sans-serif;}
+.hero{padding:4rem 1rem;text-align:center;background:#f8f9fa;}
+.hero img{max-width:100%;height:auto;border-radius:1rem;box-shadow:0 0 10px rgba(0,0,0,0.1);} 
+.section-title{margin-top:4rem;margin-bottom:2rem;}
+.img-fluid{max-width:100%;height:auto;display:block;margin:0 auto;}
+img{display:block;margin:0 auto;}
+footer{padding:2rem 0;text-align:center;font-size:0.9rem;color:#666;}
+</style>
+</head>
+<body>
+<!-- Hero -->
+<section class="hero">
+  <h1 class="display-5 fw-bold">MedVLThinker</h1>
+  <p class="lead">Simple Baselines for Multimodal Medical Reasoning</p>
+  <p class="mt-3">
+    <a href="https://xk-huang.github.io/" class="text-decoration-none me-3">Xiaoke Huang</a>
+    <a href="https://chtholly17.github.io/" class="text-decoration-none me-3">Juncheng Wu</a>
+    <a href="https://scholar.google.com/citations?user=brfcskMAAAAJ&hl=zh-CN" class="text-decoration-none me-3">Hui Liu</a>
+    <a href="https://scholar.google.com/citations?user=u1PEv-QAAAAJ&hl=zh-CN" class="text-decoration-none me-3">Xianfeng Tang</a>
+    <a href="https://yuyinzhou.github.io/" class="text-decoration-none">Yuyin Zhou</a>
+  </p>
+  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+    <a href="med_vlrm_acl_26.pdf" class="btn btn-primary btn-lg">Paper (PDF)</a>
+    <a href="https://arxiv.org/abs/2508.01234" class="btn btn-outline-primary btn-lg">arXiv</a>
+    <a href="https://github.com/UCSC-VLAA/MedVLThinker" class="btn btn-outline-primary btn-lg">Code</a>
+    <a href="https://huggingface.co/UCSC-VLAA/MedVLThinker-7B" class="btn btn-outline-primary btn-lg">Model Weights</a>
+    <a href="#citation" class="btn btn-outline-primary btn-lg">Citation</a>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- Abstract -->
+  <h2 class="section-title" id="abstract">Abstract</h2>
+  <p>
+    Large Reasoning Models (LRMs) have introduced a new paradigm in AI by enabling models to “think before responding”
+    via chain-of-thought reasoning. However, the absence of open and reproducible recipes for building reasoning‑centric
+    medical LMMs hinders community‑wide research, analysis, and comparison. We present <strong>MedVLThinker</strong>, a suite
+    of simple yet strong baselines that couples systematic data curation with two training paradigms—Supervised
+    Fine‑Tuning (SFT) and Reinforcement Learning with Verifiable Rewards (RLVR). Our best open 7 B model establishes a
+    new state‑of‑the‑art on six public medical VQA benchmarks and our 32 B variant reaches performance on par with GPT‑4o.
+    All data, code, and models are released to foster future research in multimodal medical reasoning.
+  </p>
+
+  <!-- Key Contributions -->
+  <h2 class="section-title">Key Contributions</h2>
+<img src="assets/teaser.jpg" class="img-fluid" style="width:80%;" alt="Teaser figure">
+  <ul>
+    <li><strong>Open Recipe</strong> for building multimodal medical reasoning models, including data curation, filtering, and training scripts.</li>
+    <li><strong>RLVR Training</strong> pipeline that consistently outperforms supervised CoT distillation across model sizes.</li>
+    <li><strong>State‑of‑the‑art Results</strong> on six medical VQA benchmarks for all open‑source models up to 7 B parameters.</li>
+    <li><strong>Scalability</strong>: a 32 B variant that matches proprietary GPT‑4o performance.</li>
+    <li><strong>Full Release</strong>: curated datasets, checkpoints, and evaluation harness under Apache‑2.0.</li>
+  </ul>
+
+  <!-- Method -->
+  <h2 class="section-title">Method Overview</h2>
+  <p>The figure illustrates our data filtering and two‑stage training pipeline (SFT, RLVR). Click to enlarge.</p>
+  <a href="assets/method.png"><img src="assets/method.png" class="img-fluid" style="width:100%;"  alt="Pipeline figure"></a>
+
+
+  <!-- Results -->
+  <h2 class="section-title">Main Results</h2>
+  <p>Our models set new records among open models on <em>PMC‑VQA</em>, <em>SLAKE</em>, and <em>VQA‑Rad</em>.
+     See the figure below and our <a href="https://github.com/UCSC-VLAA/MedVLThinker#results">GitHub&nbsp;repo</a> for the complete table.</p>
+  <img src="assets/results-1.png" class="img-fluid" style="width:80%;"  alt="Benchmark results">
+  <img src="assets/results-2.png" class="img-fluid" style="width:80%;"  alt="Benchmark results">
+
+  <h2 class="section-title">Qualitative Results</h2>
+  <p>We present qualitative results showcasing the capabilities of our models in various medical reasoning tasks. Click to enlarge.</p>
+  <a href="assets/sample.png"><img src="assets/sample.png" class="img-fluid" style="width:70%;"  alt="Pipeline figure"></a>
+
+
+  <!-- BibTeX -->
+  <h2 class="section-title" id="citation">Citation</h2>
+  <pre><code>@misc{medvlthinker_2025,
+  title={MedVLThinker: Simple Baselines for Multimodal Medical Reasoning},
+  author={Huang, Xiaoke and Wu, Juncheng and Liu, Hui and Tang, Xianfeng and Zhou, Yuyin},
+  journal={arXiv preprint},
+  year={2025}
+}</code></pre>
+
+  <!-- Acknowledgements -->
+  <!-- <h2 class="section-title">Acknowledgements</h2> -->
+  <!-- <p>
+    This work was supported 
+  </p> -->
+</div>
+
+<footer>
+  Last updated: 2&nbsp;Aug&nbsp;2025 · Website template adapted from Nerfies</a>.
+</footer>
+</body>
+</html>
