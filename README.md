@@ -449,10 +449,10 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 If you find this work useful, please cite:
 
 ```bibtex
-@misc{medvlthinker_2025,
-  title={MedVLThinker: Simple Baselines for Multimodal Medical Reasoning},
+@article{huang2025medvlthinker,
+  title={Medvlthinker: Simple baselines for multimodal medical reasoning},
   author={Huang, Xiaoke and Wu, Juncheng and Liu, Hui and Tang, Xianfeng and Zhou, Yuyin},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2508.02669},
   year={2025}
 }
 @article{m1_2025,
